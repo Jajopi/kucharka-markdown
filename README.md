@@ -11,13 +11,16 @@ From it, the PDF, a single-page HTML and a multi-page HTML (one page per
 chapter) are generated.
 
 ```
-cs/            Czech version          en/            English version
-  metadata.yaml  title page, date…      metadata.yaml
-  1.md … 14.md   chapters               1.md … 14.md
-  A.md … D.md    appendices             A.md … D.md
-  images/        pictures               images/
-templates/     pandoc templates, styles and filters
-Makefile       build commands
+cs/               Czech version
+  metadata.yaml     title page, date…
+  1.md … 14.md      chapters
+  A.md … D.md       appendices
+  images/           pictures
+en/               English version
+  ...               ...
+templates/        pandoc templates, styles and filters
+Makefile          build commands
+.github/          automatic release configs
 ```
 
 Every push to `master` builds everything and publishes it as the
