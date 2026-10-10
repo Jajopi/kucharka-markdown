@@ -22,7 +22,7 @@
 | Stěhovací vozík | Sklad prádla | Zdarma[^5] |
 | Pumpa na kola | Vrátnice A, B | Zdarma |
 | Pumpa na míče | Vrátnice A | Zdarma |
-| Sportovní potřeby | Vrátnice A/ B | Zdarma[^6] |
+| Sportovní potřeby | Vrátnice A, B | Zdarma[^6] |
 | Teploměr | Vrátnice A | Zdarma |
 | Váha na zavazadla[^7] | Vrátnice A, B | Zdarma |
 | REkrabička | Menza | Záloha[^8] + 2 Kč / použití |
@@ -34,6 +34,6 @@
 [^4]: Většinou je záloha 200 Kč.
 [^5]: Půjčení není garantováno, je založeno na dobré vůli paní ze skladu.
 [^6]: Viz [Půjčování sportovních potřeb](#pujcovani-sportovnich-potreb).
-[^7]: Váhy jsou mechanická na Ačku a digitální na Bčku.
+[^7]: Váhy jsou mechanické na Ačku a digitální na Bčku.
 [^8]: Záloha na REkrabičku je 80 Kč.
 [^9]: Záloha na lampičku je circa 200 Kč.
