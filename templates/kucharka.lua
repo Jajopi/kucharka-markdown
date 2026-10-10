@@ -87,7 +87,7 @@ end
 local targets = {}
 
 local function strip_scheme(s)
-  return (s:gsub('^mailto:', ''):gsub('^https?://', ''):gsub('/$', ''))
+  return (s:lower():gsub('^mailto:', ''):gsub('^https?://', ''):gsub('^www%.', ''):gsub('/$', ''))
 end
 
 local function internal_id(target)
@@ -96,6 +96,9 @@ end
 
 -- returns the (possibly modified) link and an optional URL footnote
 local function handle_link(link, in_note, in_header)
+  if link.classes:includes('footnote-ref') then
+    return link  -- second reference to a footnote (see dedup_notes)
+  end
   local id = internal_id(link.target)
   if id then
     link.target = '#' .. id
@@ -333,6 +336,7 @@ function Pandoc(doc)
   -- 1. number chapters, collect link targets, handle the appendix marker
   local blocks = pandoc.Blocks {}
   local chap, app, in_app, current = 0, 0, false, nil
+  local app_title_pending, close_group = false, false
   local seen = {}
   for _, b in ipairs(doc.blocks) do
     if b.t == 'Header' and b.identifier ~= '' then
@@ -351,12 +355,20 @@ function Pandoc(doc)
           '\\appendix',
           '\\renewcommand*{\\appendixname}{' .. name .. '}',
           '\\renewcommand*{\\chapterformat}{\\appendixname~\\thechapter\\ --\\enskip}',
-          title and ('\\cleardoublepage\\phantomsection\\addcontentsline{toc}{part}{' .. title .. '}') or '',
+          title and ('\\cleardoublepage\\phantomsection\\addcontentsline{toc}{part}{' .. title .. '}'
+            .. '{\\centering\\sffamily\\bfseries\\Huge ' .. title .. '\\par}\\bigskip') or '',
         }, '\n')))
+        app_title_pending = title ~= nil
       end
     else
       if b.t == 'Header' then
         if b.level == 1 then
+          if in_app and app_title_pending then
+            -- the first appendix starts on the page with the "Appendices" title
+            blocks:insert(pandoc.RawBlock('latex', '{\\let\\clearpage\\relax\\let\\cleardoublepage\\relax'))
+            close_group = true
+            app_title_pending = false
+          end
           if in_app then
             app = app + 1
             current = LETTERS:sub(app, app)
@@ -374,6 +386,10 @@ function Pandoc(doc)
         end
       end
       blocks:insert(b)
+      if close_group then
+        blocks:insert(pandoc.RawBlock('latex', '}'))
+        close_group = false
+      end
     end
   end
   -- other link targets: explicit spans/divs with ids, e.g. [text]{#id}
@@ -383,6 +399,7 @@ function Pandoc(doc)
   })
 
   -- 2. links and footnotes
+  blocks = dedup_notes(blocks)
   blocks = process_links(blocks)
 
   -- 3. Czech typography
@@ -390,7 +407,6 @@ function Pandoc(doc)
     blocks = blocks:walk({ Inlines = nbsp })
   end
 
-  blocks = dedup_notes(blocks)
   if is_latex then
     blocks = latex_tweaks(blocks)
     blocks = blocks:walk({
