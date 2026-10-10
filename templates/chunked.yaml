@@ -1,0 +1,12 @@
+# pandoc defaults for the multi-page HTML output (one page per chapter)
+from: ${.}/reader.lua
+to: chunkedhtml
+standalone: true
+table-of-contents: true
+toc-depth: 2
+split-level: 1
+template: ${.}/chunked.html
+filters:
+  - ${.}/kucharka.lua
+html-math-method:
+  method: mathml

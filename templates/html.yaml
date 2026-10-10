@@ -1,0 +1,14 @@
+# pandoc defaults for the single-page HTML output
+from: ${.}/reader.lua
+to: html5
+standalone: true
+embed-resources: true
+table-of-contents: true
+toc-depth: 2
+template: ${.}/html.html
+css:
+  - ${.}/style.css
+filters:
+  - ${.}/kucharka.lua
+html-math-method:
+  method: mathml

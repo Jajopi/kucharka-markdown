@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html$if(lang)$ lang="$lang$"$endif$>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <link rel="stylesheet" href="style.css" />
+$for(header-includes)$
+  $header-includes$
+$endfor$
+$if(math)$
+  $math$
+$endif$
+</head>
+<body>
+$-- navigation (labels come from nav-* in metadata.yaml)
+<nav class="sitenav">
+<span class="nav-prev">$if(previous.url)$<a href="$previous.url$" rel="previous">← $previous.title$</a>$endif$</span>
+<span class="nav-top">$if(top)$<a href="$top.url$" rel="top">$if(nav-top)$$nav-top$$else$$top.title$$endif$</a>$endif$</span>
+<span class="nav-next">$if(next.url)$<a href="$next.url$" rel="next">$next.title$ →</a>$endif$</span>
+</nav>
+$if(top)$
+$else$
+<header id="title-block-header">
+<h1 class="title">$title$</h1>
+$if(abstract)$
+<div class="intro">
+$abstract$
+</div>
+$endif$
+<p class="author">$for(author)$$author$$sep$, $endfor$</p>
+$if(date)$
+<p class="date">$if(updated-label)$$updated-label$ $endif$$date$</p>
+$endif$
+</header>
+$if(toc)$
+<nav id="TOC" role="doc-toc">
+$if(toc-title)$
+<h2 id="toc-title">$toc-title$</h2>
+$endif$
+$table-of-contents$
+</nav>
+$endif$
+$endif$
+<main>
+$body$
+</main>
+<nav class="sitenav bottom">
+<span class="nav-prev">$if(previous.url)$<a href="$previous.url$" rel="previous">← $previous.title$</a>$endif$</span>
+<span class="nav-top">$if(top)$<a href="$top.url$" rel="top">$if(nav-top)$$nav-top$$else$$top.title$$endif$</a>$endif$</span>
+<span class="nav-next">$if(next.url)$<a href="$next.url$" rel="next">$next.title$ →</a>$endif$</span>
+</nav>
+</body>
+</html>

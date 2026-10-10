@@ -1,0 +1,67 @@
+# Builds the PDFs and HTML on every push to master (rolling "latest" release)
+# and on every pushed tag (a release named after the tag).
+name: Build
+
+on:
+  push:
+    branches: [master]
+    tags: ['*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pandoc
+        uses: pandoc/actions/setup@v1
+
+      - name: Install LaTeX and tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-xetex texlive-latex-recommended texlive-latex-extra \
+            texlive-pictures texlive-lang-czechslovak texlive-fonts-recommended \
+            fonts-lmodern lmodern fonts-dejavu-core librsvg2-bin zip make
+
+      - name: Build
+        run: make all
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: kucharka
+          path: |
+            build/*.pdf
+            build/*.zip
+
+      - name: Publish rolling "latest" release
+        if: github.ref == 'refs/heads/master'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest --yes --cleanup-tag || true
+          gh release create latest build/*.pdf build/kucharka-html.zip \
+            --target "$GITHUB_SHA" --prerelease \
+            --title "Latest build (master)" \
+            --notes "Automatically built from commit $GITHUB_SHA."
+
+      - name: Publish tagged release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" build/*.pdf build/kucharka-html.zip --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" build/*.pdf build/kucharka-html.zip \
+              --title "$GITHUB_REF_NAME" --generate-notes
+          fi

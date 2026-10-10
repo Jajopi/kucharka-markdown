@@ -1,0 +1,34 @@
+# pandoc defaults for the PDF output
+from: ${.}/reader.lua
+to: latex
+pdf-engine: xelatex
+standalone: true
+table-of-contents: true
+toc-depth: 3
+number-sections: true
+top-level-division: chapter
+filters:
+  - ${.}/kucharka.lua
+include-in-header:
+  - ${.}/header.tex
+variables:
+  documentclass: scrreprt
+  classoption:
+    - numbers=enddot
+    - open=any
+  papersize: a4
+  fontsize: 12pt
+  geometry:
+    - a4paper
+    - top=2.5cm
+    - bottom=2.5cm
+    - left=2.4cm
+    - right=2.4cm
+    - headsep=0.6cm
+  secnumdepth: 0
+  indent: true
+  urlstyle: tt
+  colorlinks: true
+  linkcolor: klink
+  urlcolor: kurl
+  toccolor: black
