@@ -1,0 +1,24 @@
+# Údaje pro titulní stranu a nastavení dokumentu.
+title: Kolejní kuchařka
+author: Kolejní rada 17. listopadu
+lang: cs
+# Datum poslední aktualizace. Když řádek smažete, použije se datum sestavení.
+date: 29. října 2025
+updated-label: Naposledy aktualizováno
+intro: |
+  - Obsahuje informace o bydlení na koleji 17. listopadu.
+  - Je určena především prvákům a nově bydlícím (i když své si v ní najdou
+    i staří mazáci).
+  - Má i webovou verzi, viz <https://listopad.koleje.cuni.cz/kucharka>.
+    Tam také naleznete PDF verzi.
+qrcodes:
+  - url: https://listopad.koleje.cuni.cz/
+    caption: Stránky Kolejní rady
+  - url: https://fb.com/groups/koleje/
+    caption: Kolejní facebooková skupina
+appendix-name: Příloha
+appendices-title: Přílohy
+# popisky navigace ve vícestránkové HTML verzi
+nav-next: Další
+nav-previous: Předchozí
+nav-top: Obsah
