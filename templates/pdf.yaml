@@ -31,4 +31,4 @@ variables:
   colorlinks: true
   linkcolor: klink
   urlcolor: kurl
-  toccolor: black
+  toccolor: kurl

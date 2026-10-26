@@ -44,6 +44,11 @@
 \setkomafont{partentry}{\normalfont\bfseries\Large}
 \setkomafont{chapterentry}{\normalfont\bfseries}
 \setkomafont{chapterentrypagenumber}{\normalfont\bfseries}
+% entries are links in the link colour (toccolor in pdf.yaml), numbers stay black
+\newcommand*{\ktocnumber}[1]{\textcolor{black}{#1}}
+\DeclareTOCStyleEntry[entrynumberformat=\ktocnumber, numwidth=2.3em]{tocline}{chapter}
+\DeclareTOCStyleEntry[entrynumberformat=\ktocnumber, indent=2.3em]{tocline}{section}
+\DeclareTOCStyleEntry[entrynumberformat=\ktocnumber, indent=4.6em]{tocline}{subsection}
 
 % lists: long terms in definition lists may wrap, the description starts on a
 % new line (kucharka.lua inserts the break and forbids a page break there)
