@@ -1,14 +1,22 @@
 # Kolejní kuchařka / Dormitory Guidebook
 
+Public markdown version of Dormitory guidebook of 17. listopadu dormitory in Prague.
+
+## Live view
+
+The HTML version is currently published at <https://1011439.xyz/kucharka/>.
+
+To see the current PDF version, look into "Releases" (<https://github.com/Jajopi/kucharka-markdown/releases/tag/latest>).
+
+Both versions are rebuilt at every change in the main branch of this repository.
+
+## Sources
+
 The content here comes from original Kuchařka (version from 2025-10)
 which can be found on the
-[17. listopadu dormitory website](https://listopad.koleje.cuni.cz/dokumenty/kucharka.pdf).
+[17. listopadu dormitory council website](https://listopad.koleje.cuni.cz/dokumenty/kucharka.pdf).
 
-## Source 
-
-Source of the guidebook of the 17. listopadu dormitory, written in Markdown.
-From it, the PDF, a single-page HTML and a multi-page HTML (one page per
-chapter) are generated.
+## Structure
 
 ```
 cs/               Czech version
@@ -30,10 +38,11 @@ creates a release of its own.
 ## Editing the text
 
 You can edit the files directly on GitHub (pencil icon) – no installation needed.
-After you commit, the new PDF and HTML appear in the `latest` release within a
-few minutes.
+It is also possible to preview the text while editing.
+After you commit (green button), the new PDF and HTML appears in the `latest` release,
+usually within a few minutes.
 
-### Basics
+### Format basics
 
 | You write                         | You get                                   |
 |-----------------------------------|-------------------------------------------|
