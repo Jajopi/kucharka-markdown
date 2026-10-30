@@ -16,6 +16,10 @@ The content here comes from original Kuchařka (version from 2025-10)
 which can be found on the
 [17. listopadu dormitory council website](https://listopad.koleje.cuni.cz/dokumenty/kucharka.pdf).
 
+Only automatic grammar corrections have been applied so far.
+However, there is a list of [possible issues](./issues.md) in the text which are waiting to be corrected.
+They have been identified using LLM, so some of them may be false positives.
+
 ## Contributing
 
 If you want to propose specific changes, you can fork the repository, make the changes there and open a Pull request.
