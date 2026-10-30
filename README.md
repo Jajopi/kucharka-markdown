@@ -2,6 +2,8 @@
 
 Public markdown version of Dormitory guidebook of 17. listopadu dormitory in Prague.
 
+Currently maintained by [Ján Plachý](https://github.com/Jajopi) until dormitory council asks to take over the maintenance.
+
 ## Live view
 
 The HTML version is currently published at <https://1011439.xyz/kucharka/>.
@@ -17,13 +19,15 @@ which can be found on the
 [17. listopadu dormitory council website](https://listopad.koleje.cuni.cz/dokumenty/kucharka.pdf).
 
 Only automatic grammar corrections have been applied so far.
-However, there is a list of [possible issues](./issues.md) in the text which are waiting to be corrected.
-They have been identified using LLM, so some of them may be false positives.
+However, there is a list of [LLM identified issues](./issues.md) in the text which are waiting to be corrected.
+There might be more issues which have not been identified yet, so feel free to propose corrections.
 
 ## Contributing
 
 If you want to propose specific changes, you can fork the repository, make the changes there and open a Pull request.
 There is a [picture manual for contributing](./manuals/contributing.md) with more details.
+
+If you plan to do this regularly, you can ask the maintainers for an access to propose changes right in this repository.
 
 If you find an error which you do not want to correct yourself, you can open an Issue
 (navigate to the Issues in the top bar, use a green button "New issue").

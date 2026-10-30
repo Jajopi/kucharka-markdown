@@ -1,8 +1,9 @@
-# Possible issues
+# Identified issues
 
-Found using LLM, manually checked for false positives.
+Found using LLM, false positives are slowly being manually removed.
 Some of the points show contradiction between obsolete information, they should be updated with current facts instead.
-Few of the points come from the LLM misunderstanding the text, they should also be corrected as this can also happen to non-native speakers.
+Few of the points come from the LLM misunderstanding the text, they might need be corrected as this can also happen to non-native speakers.
+Points from E and F are mostly style and wording issues which do not need to be fixed.
 
 How to read the items: text in straight quotes `"…"` is an **exact phrase** from the
 files (you can search for it), `→ *…*` is a suggested correction (not in the files).
@@ -17,7 +18,7 @@ Line numbers may differ after some edits have been done.
 5. **Gym price** – `cs/D.md:16` "| Posilovna | Vrátnice A, B | Zdarma oproti průkazu |", `en/D.md:16` "| Gym | Receptions A, B | Free of charge with pass |"; vs. `cs/8.md:23` "která stojí 200 Kč na 6 měsíců, případně 350 Kč na rok", `en/8.md:23` "which costs CZK 200 for six months". → Same as 4.
 6. **Ball pump** – `cs/8.md:7` "Rovněž si můžete zapůjčit pumpičku na míče či kolo", `en/8.md:7` "You can also borrow a pump for balls or a bike" (the paragraph is about reception B); vs. `cs/D.md:24` "| Pumpa na míče | Vrátnice A | Zdarma |" and the reception B list `cs/6.md:53` "pumpu na kolo, sportovní vybavení" (no ball pump). EN also reads as "borrow a bike" → *a pump for balls or bikes*
 7. **Keys at reception B** – `cs/5.md:65` "klíče se dají půjčit na vrátnici B oproti kolejence" (study room B) and `cs/5.md:49` "s několika druhy míčků, které půjčují na vrátnici B" (foosball); both missing in the reception B lists `cs/6.md:53` / `cs/6.md:55` "Půjčuje klíče od malé klubovny, velké klubovny, ekumenické místnosti" (same in `en/6.md:51–53`).
-8. **Drying rooms** – `cs/6.md:13` "Sušárny se nacházejí ve stejných místnostech jako pračky, jenom v jiných patrech", `en/6.md:13` "Drying rooms are located in the same rooms as washing machines, just on different floors" – contradicts itself → *v obdobných místnostech, ale v jiných patrech*. EN also: "If you have borrowed a laundry room" → *drying room*
+8. **Drying rooms** – "If you have borrowed a laundry room" → *drying room*
 9. **"průkaz" vs. "kolejenka"** – appendix D: `cs/D.md:13` "Zdarma oproti průkazu"; chapter 5: `cs/5.md:65` "oproti kolejence". Unify.
 10. **Smoking places** – `cs/13.md:7` "který je aktuálně zavřený", "je mimo provoz", yet "Obě místa jsou označena cedulemi povolujícími kouření"; `en/13.md:7` "which is currently closed", "it is out of service", "Both places are marked with signs" – effectively nowhere to smoke. Verify the current state.
 11. **Prohibition vs. "clean up"** – `cs/5.md:75` "Zdůrazňujeme zákaz požívání alkoholu, i jídla apod., případně si to po sobě alespoň pořádně ukliďte"; `en/5.md:75` "If you decide to do that anyway, at least don’t be a jerk and clean up after yourself properly". Clarify whether food is allowed.
