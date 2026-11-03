@@ -14,26 +14,27 @@
 | Oven room | Receptions A, B | Free of charge with pass (return the same day) |
 | Baking trays for oven room | Reception A | Free of charge (return clean) |
 | Gym | Receptions A, B | Free of charge with pass |
-| Piano room | Receptions A, B | Free of charge |
+| Piano room[^2] | Receptions A, B | Free of charge |
 | Small clubroom (+ foosball) | Reception B | Free of charge |
-| Big clubroom | Reception B | Contribution to clean-up[^2] |
-| Ecumenical room | Reception B | Free of charge[^3] |
-| Bike room | [Its administrator](https://listopad.koleje.cuni.cz/kolarny) | Deposit for key[^4] |
-| Moving cart | Laundry storage room | Free of charge[^5] |
+| Big clubroom | Reception B | Contribution to clean-up[^3] |
+| Ecumenical room | Reception B | Free of charge[^4] |
+| Bike room | [Its administrator](https://listopad.koleje.cuni.cz/kolarny) | Deposit for key[^5] |
+| Moving cart | Laundry storage room | Free of charge[^6] |
 | Bike pump | Receptions A, B | Free of charge |
 | Ball pump | Reception A | Free of charge |
-| Sports equipment | Receptions A/B | Free of charge[^6] |
+| Sports equipment | Receptions A/B | Free of charge[^7] |
 | Thermometer | Reception A | Free of charge |
-| Luggage scale[^7] | Receptions A, B | Free of charge |
-| REkrabička | Canteen | Deposit[^8] + CZK 2 / use |
-| Lamp | Mr. Holub | Deposit[^9] |
+| Luggage scale[^8] | Receptions A, B | Free of charge |
+| REkrabička | Canteen | Deposit[^9] + CZK 2 / use |
+| Lamp | Mr. Holub | Deposit[^10] |
 
 [^1]: After two days, you pay CZK 20 for each additional day.
-[^2]: Usually CZK 100; with peaceful events, you can ask for a fee waiver.
-[^3]: You need to request use of the room from the room administrator.
-[^4]: The deposit is usually CZK 200.
-[^5]: There is no guarantee for borrowing a cart; it depends on the good will of woman in the storage room.
-[^6]: See [Borrowing sports equipment](#borrowing-sports-equipment).
-[^7]: A mechanical scale is at reception A, and a digital one at reception B.
-[^8]: The deposit for REkrabička is CZK 80.
-[^9]: The deposit for a lamp is circa CZK 200.
+[^2]: Possible to use until 1:00 AM, according to <https://listopad.koleje.cuni.cz/zapisy/2023-12-14.pdf>, but please keep a reasonably low volume during the night.
+[^3]: Usually CZK 100; with peaceful events, you can ask for a fee waiver.
+[^4]: You need to request use of the room from the room administrator.
+[^5]: The deposit is usually CZK 200.
+[^6]: There is no guarantee for borrowing a cart; it depends on the good will of woman in the storage room.
+[^7]: See [Borrowing sports equipment](#borrowing-sports-equipment).
+[^8]: A mechanical scale is at reception A, and a digital one at reception B.
+[^9]: The deposit for REkrabička is CZK 80.
+[^10]: The deposit for a lamp is circa CZK 200.
