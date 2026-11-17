@@ -13,6 +13,8 @@ kucharka.lua – pandoc filter used by all outputs (PDF, HTML, chunked HTML).
   text already is the URL)
 * PDF: title page built from metadata; HTML: intro goes to the title block
 * Czech: non-breaking space after one-letter prepositions (v, k, s, z, …)
+* below every chapter title: the date of the chapter's last change
+  (computed by reader.lua)
 ]]
 
 local stringify = pandoc.utils.stringify
@@ -386,6 +388,18 @@ function Pandoc(doc)
         end
       end
       blocks:insert(b)
+      -- date of the last change of the chapter (set by reader.lua)
+      local updated = b.t == 'Header' and b.level == 1 and b.attributes.updated
+      if updated then
+        b.attributes.updated = nil
+        if is_latex then
+          blocks:insert(pandoc.RawBlock('latex',
+            '\\kchapterupdated{' .. updated .. '}'))
+        elseif is_html then
+          blocks:insert(pandoc.Div({ pandoc.Plain({ pandoc.Str(updated) }) },
+            { class = 'chapter-updated' }))
+        end
+      end
       if close_group then
         blocks:insert(pandoc.RawBlock('latex', '}'))
         close_group = false

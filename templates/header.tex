@@ -28,6 +28,16 @@
 \RedeclareSectionCommand[beforeskip=0pt, afterskip=1.2\baselineskip]{chapter}
 \RedeclareSectionCommand[beforeskip=-1.5\baselineskip, afterskip=0.6\baselineskip]{section}
 
+% date of the chapter's last change, below the chapter title (kucharka.lua);
+% the first paragraph after it stays unindented as after the title itself
+\makeatletter
+\newcommand*{\kchapterupdated}[1]{%
+  \vspace*{-0.8\baselineskip}%
+  {\raggedleft\small\sffamily\color{gray}#1\par}%
+  \nopagebreak\vspace{0.6\baselineskip}%
+  \@afterindentfalse\@afterheading}
+\makeatother
+
 % running header "Kapitola 1. Název" with a rule, page number at the bottom
 \usepackage[headsepline]{scrlayer-scrpage}
 \pagestyle{scrheadings}

@@ -1,17 +1,17 @@
 # Title page data and document settings.
 title: Dormitory Guidebook
-author: 17. listopadu Dormitory Council
+author: Based on materials from the Guidebook created by the Dormitory Council of 17. listopadu
 lang: en
 # Date of the last update. If you delete this line, the build date is used.
 date: October 29, 2025
-updated-label: Last updated
+updated-label: Last updated by the Dormitory Council
 intro: |
   - This guidebook contains information about living in the 17. listopadu
     Dormitory.
   - It is intended primarily (but not only!) for first-year students and
     newcomers to the dormitory.
-  - The guidebook has also a web version; see
-    <https://listopad.koleje.cuni.cz/kucharka>. The PDF version is there too.
+  - The original web version was not updated for such a long time that it was basically unusable. This (web and PDF) version can currently be found at <https://1011439.xyz/kucharka>.
+  - The PDF version maintained by the Dormitory Council can be found at <https://listopad.koleje.cuni.cz/kucharka>.
 qrcodes:
   - url: https://listopad.koleje.cuni.cz/
     caption: Dormitory Council web pages

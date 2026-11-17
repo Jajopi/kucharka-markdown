@@ -25,7 +25,9 @@ if ! { tlmgr update --self && tlmgr install $PKGS; }; then
 fi
 
 apt-get update -qq
-DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends make zip
+DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommends make zip git
+# chapter dates are read from git; the mounted repository has another owner
+git config --global --add safe.directory "$PWD"
 
 rm -rf build
 make all

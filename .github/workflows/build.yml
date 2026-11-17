@@ -27,6 +27,9 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+        with:
+          # full history: chapter dates come from the last commit of each file
+          fetch-depth: 0
 
       - name: Build
         run: |

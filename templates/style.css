@@ -29,6 +29,14 @@ h1 { font-size: 1.9em; margin: 2em 0 0.8em; }
 h2 { font-size: 1.4em; font-weight: normal; text-align: center; margin: 1.8em 0 0.6em; }
 h3 { font-size: 1.15em; font-weight: normal; text-align: center; margin: 1.5em 0 0.5em; }
 h1 .header-section-number { margin-right: 0.3em; }
+/* date of the chapter's last change (kucharka.lua) */
+.chapter-updated {
+  margin: -0.6em 0 1.2em;
+  text-align: right;
+  color: var(--muted);
+  font-size: 0.85em;
+  font-family: "Latin Modern Sans", "CMU Sans Serif", "Helvetica Neue", Arial, sans-serif;
+}
 
 a { color: var(--link); }
 a:visited { color: #5b3a8a; }
